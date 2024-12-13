@@ -1,3 +1,4 @@
+/* Hide Footer and Navbar */
 .web-footer {
     display: none;
 }
@@ -6,6 +7,7 @@
     display: none;
 }
 
+/* General Styling for Login, Signup, and Forgot Password Pages */
 .for-login .login-content.page-card,
 .for-signup .login-content.page-card,
 .for-forgot .login-content.page-card {
@@ -18,26 +20,27 @@
 .for-forgot .page-card-head h4 {
     position: relative;
     color: white;
-    line-height: 1;
-    font-size: 24px;
+    line-height: 1.2;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .for-login .page-card-head img,
 .for-signup .page-card-head img,
 .for-forgot .page-card-head img {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 .login-content .page-card-head {
     position: relative;
     margin-bottom: 40px;
-    padding: 30px 30px 30px;
+    padding: 30px;
     text-align: center;
     background: none;
 }
 
 .login-content .page-card-head::before {
-    background: linear-gradient(-135deg, #4688eb 0%, #06345d 100%);
+    background: linear-gradient(-135deg, #6a94c4 0%, #3c5b7d 100%);
     content: "";
     position: absolute;
     height: 300px;
@@ -49,11 +52,12 @@
     transform: rotate(5deg);
 }
 
+/* Sign-up and Forgot password links */
 .for-login .sign-up-message a,
 .for-signup .sign-up-message a,
 .for-forgot .sign-up-message a {
     font-size: 16px;
-    color: #212529;
+    color: #007bff;
 }
 
 .btn.link-btn {
@@ -65,10 +69,11 @@
     line-height: 1.3;
     outline: none !important;
     box-shadow: none;
-    border-bottom: 2px solid #ebebeb;
-    border-radius: 0px;
+    border-bottom: 2px solid #007bff;
+    border-radius: 0;
 }
 
+/* Forgot Password Section */
 .for-login .page-card .page-card-body .forgot-password-message,
 .for-forgot .page-card .page-card-body .forgot-password-message,
 .for-signup .page-card .page-card-body .forgot-password-message,
@@ -82,8 +87,10 @@
 .for-email-login .page-card .page-card-body .forgot-password-message a {
     font-size: 16px;
     cursor: pointer;
+    color: #007bff;
 }
 
+/* Input Fields */
 .for-login .page-card .page-card-body input[type=text],
 .for-login .page-card .page-card-body input[type=email],
 .for-login .page-card .page-card-body input[type=password],
@@ -98,12 +105,12 @@
 .for-email-login .page-card .page-card-body input[type=password] {
     border: 1px solid #ced4da;
     background-color: #fff;
-    height: 48px;
+    height: 50px;
     padding: 0 15px;
-    font-size: 15px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    color: #3f3f3f;
+    font-size: 16px;
+    border-radius: 8px;
+    color: #333;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .for-login .page-card .page-card-body .email-field .toggle-password,
@@ -117,52 +124,56 @@
     top: 15px;
 }
 
+/* Button Styles */
 .btn-primary {
-    background-image: -moz-linear-gradient(top, #12436e 0%, #1d71b8 100%);
-    background-image: -webkit-linear-gradient(top, #12436e 0%, #1d71b8 100%);
-    background-image: linear-gradient(to bottom, #12436e 0%, #1d71b8 100%);
-    -webkit-box-shadow: 0px 0px 30px 0px rgb(42 31 188 / 40%);
-    box-shadow: 0px 0px 30px 0px rgb(42 31 188 / 40%);
+    background-image: linear-gradient(to bottom, #1a73e8 0%, #0a4a74 100%);
+    box-shadow: 0px 0px 25px rgba(42, 31, 188, 0.3);
     background-size: auto 140%;
-    border: 0px;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background-position: bottom center;
+    background-color: #0062cc;
+    border-color: #0056b3;
 }
 
-.btn-primary:hover {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
-}
-
+/* General Button Styling */
 .btn {
     font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding: 0px 30px;
-    line-height: 48px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
+    padding: 15px 30px;
+    line-height: 50px;
+    border-radius: 8px;
     cursor: pointer;
-    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     outline: 0;
 }
 
+/* Image Size Adjustments */
 .for-login .page-card-head img,
 .for-forgot .page-card-head img,
 .for-signup .page-card-head img,
 .for-email-login .page-card-head img {
-    max-height: 90px;
+    max-height: 100px;
+    max-width: 100%;
+    margin-bottom: 15px;
 }
 
+/* RTL Language Support */
 html:lang(ar) .login-content .form-control {
     direction: rtl;
 }
 
+/* Language Switcher Dropdown */
 .dropdown-item.img-thumbnail {
     width: 50px;
     border-radius: 0;
@@ -171,14 +182,38 @@ html:lang(ar) .login-content .form-control {
 }
 
 .dropdown-menu.show {
-    max-width: 60px;
-    min-width: 60px;
+    max-width: 70px;
+    min-width: 70px;
 }
 
 .language-switcher-image {
     cursor: pointer;
 }
 
+/* Page Card Padding */
 .login-content.page-card {
-    padding-bottom: 45px;
+    padding-bottom: 50px;
+}
+
+/* Additional Features */
+@media (max-width: 767px) {
+    .login-content.page-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .page-card-head h4 {
+        font-size: 22px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+    }
+
+    .page-card-body input[type=text],
+    .page-card-body input[type=email],
+    .page-card-body input[type=password] {
+        height: 45px;
+        font-size: 14px;
+    }
 }
